@@ -1,0 +1,10 @@
+services:
+  report-notebook:
+    build: .
+    container_name: ai-report-generation
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+    working_dir: /app
+    restart: unless-stopped
